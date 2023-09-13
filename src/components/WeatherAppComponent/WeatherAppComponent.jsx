@@ -44,40 +44,35 @@ const WeatherAppComponent = () => {
 }, [location]);
 
   return (
-    <div className="container f4">
+    <div className="container f4 ">               
       <h1>Weather App</h1>
 
       {currentLocationWeather && (
-        <div className="  bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5">
+        <div className="  bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5 ba">
           <h2>Current Location Weather</h2>
           <h3>Location: {currentLocationWeather.location.name}</h3>
           <h4>Temperature: {currentLocationWeather.current.temp_c}°C</h4>
           <h4>Condition: {currentLocationWeather.current.condition.text}</h4>
-          <div className="weather-icon">
-            <i className={`wi wi-owm-${currentLocationWeather.current.condition.code}`}></i>
-          </div>
         </div>
       )}
 
-      <div className="input-group">
+      <div className="bg-light-blue  br3 pa3 ma2 grow bw2 shadow-5 input-group ba">
         <input 
+          className="pa2 input-reset ba bg-transparent  hover-black w-40 br3"
           type="text" 
           placeholder="Enter city" 
           value={searchCity}
           onChange={(e) => setSearchCity(e.target.value)}
         />
-        <button className="search-button" onClick={handleSearch}>Search</button>
+        <button className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-0 br3 bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5 ba" onClick={handleSearch}>Search</button>
       </div>
 
       {searchedCityWeather && (
-        <div className="weather-box">
+        <div className="bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5 ba">
           <h2>Weather in {searchedCityWeather.location.name}</h2>
           <h3>Location: {searchedCityWeather.location.name}</h3>
           <h4>Temperature: {searchedCityWeather.current.temp_c}°C</h4>
           <h4>Condition: {searchedCityWeather.current.condition.text}</h4>
-          <div className="weather-icon">
-            <i className={`wi wi-owm-${searchedCityWeather.current.condition.code}`}></i>
-          </div>
         </div>
       )}
     </div>
