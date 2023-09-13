@@ -1,0 +1,53 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.container {
+    max-width: 600px;
+    /* margin: 0 auto ; */
+    padding-top: 20px;
+    margin-left: 320px;
+    margin-top: 120px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  body{
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+  }
+  
+  .input-group input {
+    padding: 8px;
+    width: 70%;
+    margin-right: 10px;
+  }
+  
+  .input-group button {
+    padding: 8px 16px;
+  }
+  
+  .weather-container {
+    margin-top: 20px;
+  }
+  
+  .weather-box {
+    padding: 10px;
+    background-color: #5e53c9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .weather-box h2 {
+    margin-bottom: 5px;
+  }
+  
+  .weather-box h3, .weather-box h4 {
+    margin: 5px 0;
+  }
+  
+  
